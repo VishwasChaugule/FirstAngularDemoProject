@@ -1,0 +1,20 @@
+<div class="main">
+  <header>
+    <h1>{{title | uppercase}}</h1>
+  </header>
+  <main>
+    <p>Angular is a development platform, built on TypeScript. As a platform, Angular includes:</p>
+  
+    <ul *ngFor="let feature of angularFeatures">
+      <li>{{feature}}</li>
+    </ul>
+    <button (click)="sayHello()">Say Hello</button>
+  </main>
+  <footer>
+    <div class="contact" *ngIf="email != null">
+      Contact: {{email | lowercase}}
+    </div>
+    &copy; Vishwas 2022.
+  </footer>
+</div>
+<router-outlet></router-outlet>
